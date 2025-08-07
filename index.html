@@ -1,27 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=decive-width, initial-sclae=1.0">
-    <title>Unplugged Supply</title>
-    <style>
-        body { background-color: #111; color: #fff; font-family: sans-serif; text-align: center; padding: 50px;}
-        h1 {font-size: 3em; color: #39ff14; }
-        p {font-size: 1.2em; color: #ccc; max-width: 500px; margin: auto; }
-        button {background: #39ff14; color: #111; border: none; padding: 15px 30px; font-size: 1em; cursor:pointer; margin-top: 20px;}
-        img {max-width: 300px; margin: 20px auto; display: block; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unplugged Supply</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #111111;
+      color: #F2F2F2;
+      line-height: 1.6;
+    }
+
+    header {
+    position: relative;
+    background: url("http://localhost:your-port/images/hero.jpg");
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    overflow: hidden;
+    }
+
+    .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay for contrast */
+    z-index: 1;
+    }
+
+    .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    }
+
+    .hero-content h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    color: #C9FF00;
+    }
+
+    .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #F2F2F2
+    }
+
+    .cta-button {
+    background: #0D98BA;
+    color: #000;
+    border: none;
+    padding: 1rem 2rem;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    }
+
+    .cta-button:hover {
+    background: #C9FF00;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .about {
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .about p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.1rem;
+    }
+
+    .featured {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .featured-item {
+      flex: 1 1 300px;
+      background: #1A1A1A;
+      padding: 1rem;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    .featured-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .featured-item h3 {
+      margin: 1rem 0 0.5rem;
+    }
+
+    .featured-item p {
+      font-size: 0.95rem;
+    }
+
+    .call-to-action {
+      background: #0D98BA;
+      color: #000;
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    .call-to-action h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #000;
+    }
+
+    .call-to-action .cta-button {
+      background: #000;
+      color: #F2F2F2;
+    }
+    .call-to-action .cta-button:hover{
+      background: #C9FF00;
+      color: #000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      .featured {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1> Unplugged Supply</h1>
-    <P>Unfiltered drops. Unplugged style. Disconnect from the norm.</P>
-    <button onclick="window.location.href='https://Unpluggedsupply.myshopify.com'">Enter Shop</button>
-    
-    <img src="https://via.placeholder.com/300x400.png?text=Disconnect+Tee" alt="Disconnect Tee">
-    <img src="https://via.placeholder.com/300x400.png?text=Signal+Fade+Hoodie" atl="Signal Fade Hoodie">
-    <img src="https://via.placeholder.com/300x400.png?text=Drift+Frequence+Tee" alt="Drift Frequency Tee">
-    <img src="https://via.placeholder.com/300x400.png?text=Wave+Drop+Hoodie" alt="Wave Drop Hoodie">
-    <p>&copy; 2025 Unplugged Supply.</p>
+
+  <!-- Hero Section -->
+    <header>
+      <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Unplugged Supply</h1>
+            <p>Modern streetwear for those who choose to disconnect and define their own path.</p>
+            <button class="cta-button" onclick="window.location.href='interactive.html'">Explore the Experience</button>
+        </div>
+    </header>
+
+  <!-- About Section -->
+  <section class="about">
+    <h2>Our Mission</h2>
+    <p>Unplugged Supply is more than a clothing brand — it's a movement. Built for creators, wanderers, and thinkers who thrive outside the noise. Our apparel empowers bold expression in every thread.</p>
+  </section>
+
+  <!-- Featured Products/Collections -->
+  <section>
+    <h2 style="text-align: center;">Featured Collections</h2>
+    <div class="featured">
+      <div class="featured-item">
+        <img src="https://via.placeholder.com/400x500" alt="Product 1">
+        <h3>Urban Essentials</h3>
+        <p>Utility meets style with our must-have daily pieces.</p>
+      </div>
+      <div class="featured-item">
+        <img src="https://via.placeholder.com/400x500" alt="Product 2">
+        <h3>Nomad Series</h3>
+        <p>Inspired by movement — made for freedom and form.</p>
+      </div>
+      <div class="featured-item">
+        <img src="https://via.placeholder.com/400x500" alt="Product 3">
+        <h3>Drop 03</h3>
+        <p>Limited edition. Designed to disrupt.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="call-to-action">
+    <h2>Ready to Disconnect?</h2>
+    <p>Step into your next favorite fit — Unplugged.</p>
+    <button class="cta-button" onclick="window.location.href='interactive.html'">Shop Now</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Unplugged Supply. All rights reserved.
+  </footer>
+
 </body>
-</html>
-<img src="unplugged_logo.svg" alt="Unplugged Supply Logo" width="200" />
+</htm
